@@ -25,4 +25,11 @@ public class ShopTest {
         shop.removeItemFromStock(piano);
         assertEquals(0, shop.getStockSize());
     }
+
+    @Test
+    public void canCalculateTotalPotentialProfit() {
+        shop.addItemToStock(piano);
+        shop.addItemToStock(piano);
+        assertEquals(50, shop.calculateMaxProfit(), 0.0);
+    }
 }

@@ -13,7 +13,7 @@ public class Shop implements ISell {
     }
 
     public double calculateMarkup() {
-        return buyPrice * 1.50;
+        return sellPrice - buyPrice;
     }
 
     public void addItemToStock(ISell item) {
@@ -26,5 +26,13 @@ public class Shop implements ISell {
 
     public int getStockSize() {
         return this.stock.size();
+    }
+
+    public double calculateMaxProfit() {
+        double count = 0.00;
+        for (ISell item : stock) {
+            count += item.calculateMarkup();
+        }
+        return count;
     }
 }

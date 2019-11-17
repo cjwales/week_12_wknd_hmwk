@@ -28,7 +28,7 @@ public class Trumpet extends Instrument implements IPlay, ISell {
     }
 
     public double calculateMarkup() {
-        return buyPrice * 1.50;
+        return sellPrice - buyPrice;
     }
 
     public String getDescription() {
