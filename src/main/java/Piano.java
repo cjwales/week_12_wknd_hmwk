@@ -1,9 +1,10 @@
-public class Piano implements IPlay {
+public class Piano extends Instrument implements IPlay {
 
     private int keys;
     private String type;
 
-    public Piano(int keys, String type) {
+    public Piano(String make, String material, String colour, int keys, String type) {
+        super(make, material, colour);
         this.keys = keys;
         this.type = type;
     }

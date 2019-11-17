@@ -9,11 +9,16 @@ public class TrumpetTest {
 
     @Before
     public void before() {
-        trumpet = new Trumpet(4, "Full");
+        trumpet = new Trumpet("Getzen", "Brass", "Brass", 4, "Full");
     }
 
     @Test
     public void canPlay() {
         assertEquals("Toot", trumpet.play());
+    }
+
+    @Test
+    public void canGetMaterial() {
+        assertEquals("Brass", trumpet.getMaterial());
     }
 }

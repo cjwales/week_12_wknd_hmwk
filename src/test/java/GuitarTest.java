@@ -9,11 +9,16 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("Electric", 6);
+        guitar = new Guitar("Fender", "Wood", "Red", "Electric", 6);
     }
 
     @Test
     public void canPlay() {
         assertEquals("Twang", guitar.play());
+    }
+
+    @Test
+    public void canGetColour() {
+        assertEquals("Red", guitar.getColour());
     }
 }

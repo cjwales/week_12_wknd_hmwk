@@ -1,9 +1,10 @@
-public class Guitar implements IPlay{
+public class Guitar extends Instrument implements IPlay{
 
     private String type;
     private int strings;
 
-    public Guitar(String type, int strings) {
+    public Guitar(String make, String material, String colour, String type, int strings) {
+        super(make, material, colour);
         this.type = type;
         this.strings = strings;
     }
